@@ -20,33 +20,30 @@
 			
 		<div data-role="header" data-position="inline">
 			<a href="index.html" data-icon="home">Menu</a>
-			<h1>Registration</h1>
+			<h1>Population</h1>
 		</div>
 		
    <div id="wrapper">
 	<form action="" name="myForm">
 		<div data-role="content">
-			<div class="fname" data-role="fieldcontain">
-				<label for="fname"> First Name </label> <input name="fname"
-					id="fname" placeholder="enter first name" value="" data-mini="true" type="text">
+			<div  data-role="fieldcontain">
+				<label for="male"> Male </label> <input name="fname"
+					id="male"  value="" data-mini="true" type="number">
 			</div>
-			<div class="lname" data-role="fieldcontain">
-				<label for="lname"> Last Name </label> <input name="lname"
-					id="lname" placeholder="enter last name" value="" type="text">
+			<div data-role="fieldcontain">
+				<label for="female"> Female </label> <input name="lname"
+					id="female"  value="" type="number">
 			</div>
-			<div class="age" data-role="fieldcontain">
-				<label for="age"> Age </label> <input name="age" id="age"
-					placeholder="enter age" value="" type="number">
+			<div  data-role="fieldcontain">
+				<label for="total"> Total Population </label> <input name="age" id="total"
+					value="" type="number">
 			</div>
-			<div class="username" data-role="fieldcontain">
-				<label for="username"> User Name </label> <input name="username"
-					id="username" placeholder="enter username" value="" type="text">
+			<div  data-role="fieldcontain">
+				<label for="nofamilies"> No of families</label> <input name="nofamilies"
+					id="nofamilies"  value="" type="number">
 			</div>
-			<div class="psw" data-role="fieldcontain">
-				<label for="psw"> Password </label> <input name="password" id="psw"
-					placeholder="enter password" value="" type="password">
-			</div>
-			<input id="register" value="Register" type="button" name="Register" onclick="validationcheck();">
+			
+			<input id="population" value="Register" type="button" name="population" onclick="validationcheck();">
 		</div>
 		</form>
 		</div>
@@ -55,23 +52,20 @@
 	<script type="text/javascript">
 		function validationcheck() {
 			
-			if (document.myForm.fname.value == "") {
-				alert("Please Enter fname.");
-				document.myForm.fname.focus(); 
-			} else if (document.myForm.lname.value == "") {
-				alert("Please Enter lname.");
-				document.myForm.lname.focus();
-			} else if (document.myForm.age.value == "") {
-				alert("Please Enter age.");
-				document.myForm.age.focus();
-			} else if (document.myForm.username.value == "") {
-				alert("Please Enter username.");
-				document.myForm.username.focus();
+			if (document.myForm.male.value == "") {
+				alert("Please Enter Male Population.");
+				document.myForm.male.focus(); 
+			} else if (document.myForm.female.value == "") {
+				alert("Please Enter Female Population.");
+				document.myForm.female.focus();
+			} else if (document.myForm.total.value == "") {
+				alert("Please Enter Total Population.");
+				document.myForm.total.focus();
+			} else if (document.myForm.nofamilies.value == "") {
+				alert("Please Enter Number of Families.");
+				document.myForm.nofamilies.focus();
 			}
-			else if (document.myForm.psw.value == "") {
-				alert("Please Enter password");
-				document.myForm.psw.focus();
-			}
+			
 			else
 				{
 				  success();
